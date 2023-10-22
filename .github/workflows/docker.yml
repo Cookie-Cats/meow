@@ -1,20 +1,15 @@
 name: Build Docker Image
 
 on:
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
-
   workflow_dispatch:
     inputs:
       Release:
         description: 'Release or not'
-        required: false
+        required: true
         default: 'false'
       Tag:
         description: 'Tag name: release or develop'
-        required: false
+        required: true
         default: 'develop'
 
 jobs:
