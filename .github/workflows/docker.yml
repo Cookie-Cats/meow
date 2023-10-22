@@ -40,5 +40,5 @@ jobs:
           CARGO_PKG_VERSION: ${{ github.sha }}
         with:
           platforms: linux/amd64,linux/arm64
-          tags: ghcr.io/Cookie-Cats/meow:${{ github.event.inputs.Tag }}
+          tags: ghcr.io/cookie-cats/meow:${{ github.event.inputs.Tag }}
           push: ${{ github.event.inputs.Release }}
