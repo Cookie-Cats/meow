@@ -6,6 +6,8 @@
 
 用 Rust 实现的高性能 HTTP 服务器，用于返回访问者 IP。
 
+<img src="meow.png" width=30% height=30% />
+
 ## 编译方法
 
 ```bash
@@ -19,8 +21,6 @@ cargo build --release
 # 运行
 ./target/release/meow --help
 ```
-
-
 
 ## 用法
 
