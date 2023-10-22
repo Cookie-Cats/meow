@@ -2,10 +2,11 @@ use actix_web::{middleware, web, App, HttpRequest, HttpServer, Responder};
 use clap::Parser;
 use std::net::{ToSocketAddrs, SocketAddr};
 
+
 #[derive(Parser)]
 #[command(name = "meow")]
 #[command(author = "Diazepam. <https://github.com/metaphorme>")]
-#[command(version = "beta")]
+#[command(version = env!("CARGO_PKG_VERSION"))]
 #[command(about = "Sweet cats always meow~ back.\nIf you need help, please visit https://github.com/Cookie-Cats/meow")]
 struct Cli {
     #[arg(short = 'l', long, value_name = "0.0.0.0:8080")]

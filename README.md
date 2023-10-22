@@ -8,19 +8,22 @@
 
 <img src="meow.png" width=30% height=30% />
 
-## 编译方法
+## 安装
 
-```bash
-# 获取 meow
-git clone https://github.com/Cookie-Cats/meow.git
+1. 编译安装
 
-# 编译
-cd meow
-cargo build --release
+   ```bash
+   git clone https://github.com/Cookie-Cats/meow.git
+   cargo install --path meow
+   ```
 
-# 运行
-./target/release/meow --help
-```
+2. Docker
+
+   ```bash
+   docker run -d --rm \
+   	-p 8080:8080 \
+   	ghcr.io/Cookie-Cats/meow:develop
+   ```
 
 ## 用法
 
