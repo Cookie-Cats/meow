@@ -17,11 +17,11 @@
    cargo install --path meow
    ```
 
-2. Docker
+2. Docker（仅 Linux 可用）
 
    ```bash
    docker run -d --rm \
-   	-p 8080:8080 \
+   	--net=host \
    	ghcr.io/cookie-cats/meow:develop
    ```
 

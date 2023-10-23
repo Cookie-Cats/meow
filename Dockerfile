@@ -23,6 +23,4 @@ LABEL org.opencontainers.image.authors="Metaphorme" \
 
 COPY --from=builder /usr/local/cargo/bin/meow /usr/local/bin/meow
 
-EXPOSE 8080
-
 ENTRYPOINT ["/usr/local/bin/meow"]
