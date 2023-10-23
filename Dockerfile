@@ -18,7 +18,8 @@ RUN cargo install --path .
 FROM redhat/ubi9-minimal:latest
 
 LABEL org.opencontainers.image.authors="Metaphorme" \
-      org.opencontainers.image.documentation="https://github.com/Cookie-Cats/meow"
+      org.opencontainers.image.documentation="https://github.com/Cookie-Cats/meow" \
+      org.opencontainers.image.source="https://github.com/Cookie-Cats/meow"
 
 COPY --from=builder /usr/local/cargo/bin/meow /usr/local/bin/meow
 

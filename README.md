@@ -22,7 +22,7 @@
    ```bash
    docker run -d --rm \
    	-p 8080:8080 \
-   	ghcr.io/Cookie-Cats/meow:develop
+   	ghcr.io/cookie-cats/meow:develop
    ```
 
 ## 用法
