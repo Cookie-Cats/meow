@@ -40,5 +40,7 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           platforms: linux/amd64,linux/arm64
+          build-args: |
+            CARGO_PKG_VERSION=${{ github.sha }}
           tags: ghcr.io/cookie-cats/meow:${{ github.event.inputs.Tag }}
           push: ${{ github.event.inputs.Release }}
