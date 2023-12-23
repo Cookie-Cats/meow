@@ -16,7 +16,7 @@ struct Cli {
 async fn index(req: HttpRequest) -> impl Responder {
     let addr = req.peer_addr().unwrap_or("0.0.0.0:0".parse().unwrap());
     let ip = addr.ip().to_string();
-    format!("{}\n", ip)
+    format!("{}", ip)
 }
 
 #[actix_web::main]
@@ -64,7 +64,7 @@ mod tests {
         assert_eq!(resp.status(), http::StatusCode::OK);
 
         let response_body = resp.into_body();
-        assert_eq!(to_bytes(response_body).await?.as_ref(), b"0.0.0.0\n");
+        assert_eq!(to_bytes(response_body).await?.as_ref(), b"0.0.0.0");
 
         Ok(())
     }
